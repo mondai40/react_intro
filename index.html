@@ -13,15 +13,25 @@
     </head>
     <body>
         <div id="root"></div>
+
         <script type="text/babel">
-            const Hello = () => 
-            <div className="heading">
-                <h1>Welcome to React</h1>
-            </div>;
+
+            const Hello = ({library, name}) => {  
+                return(
+                    <div className="heading">
+                        <h1>Welcome to {library}</h1>
+                        <p>{name}</p>
+                    </div>
+                );
+            };
+            
+
             ReactDOM.render(
-                <Hello />,
+                <Hello library="test" name="shin" />,
                 document.getElementById("root")
             );
+
         </script>
+
     </body>
 </html>
