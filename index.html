@@ -16,18 +16,20 @@
 
         <script type="text/babel">
 
-            const Hello = ({library, name}) => {  
-                return(
-                    <div className="heading">
-                        <h1>Welcome to {library}</h1>
-                        <p>{name}</p>
-                    </div>
-                );
-            };
+            const Sea = ({name}) => <h1>{name}</h1>;
             
-
+            const App = () => (
+                    <div>
+                        <Sea name="Pacific Sea"/>
+                        <Sea name="Atlantic Sea"/>
+                        <Sea name="Indian Sea"/>
+                        <Sea name="Southern Sea"/>
+                        <Sea name="Pacific Sea"/>
+                    </div>
+            );
+            
             ReactDOM.render(
-                <Hello library="test" name="shin" />,
+                <App />,
                 document.getElementById("root")
             );
 
