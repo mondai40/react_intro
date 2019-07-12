@@ -18,15 +18,24 @@
 
             const Sea = ({name}) => <h1>{name}</h1>;
             
-            const App = () => (
-                    <div>
-                        <Sea name="Pacific Sea"/>
-                        <Sea name="Atlantic Sea"/>
-                        <Sea name="Indian Sea"/>
-                        <Sea name="Southern Sea"/>
-                        <Sea name="Pacific Sea"/>
-                    </div>
-            );
+            class App extends React.Component {
+                state = {
+                    loggedIn: true
+                };
+
+                render() {
+                    return(
+                        <div>
+                            <div>{this.state.loggedIn? "logged in": "not logged in"}</div>
+                            <Sea name="Pacific Sea"/>
+                            <Sea name="Atlantic Sea"/>
+                            <Sea name="Indian Sea"/>
+                            <Sea name="Southern Sea"/>
+                            <Sea name="Pacific Sea"/>
+                        </div>
+                    );
+                }
+            }
             
             ReactDOM.render(
                 <App />,
